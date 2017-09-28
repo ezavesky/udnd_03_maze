@@ -141,8 +141,8 @@ PlayerSettings:
   targetPixelDensity: 0
   resolutionScalingMode: 0
   applicationIdentifier:
-    Android: com.Udacity.AMaze
-    Standalone: com.Udacity.AMaze
+    Android: com.EricZavesky.AMaze
+    Standalone: com.EricZavesky.AMaze
     Tizen: com.Company.ProductName
     iOS: com.Udacity.AMaze
     tvOS: com.Company.ProductName

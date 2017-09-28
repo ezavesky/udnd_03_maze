@@ -21,13 +21,20 @@ TBD
 TBD
 
 * Challenges
-  * TBD
+  * Reticle interactions - generally the click-based navigation with waypoints was
+    a very unsatisfying experience, both as a user and a developer.  Primarly,
+    the default max-distance for the reticle (20m) made it hard
+    to reliably interact with the waypoints in a space this large.  During mid development
+    some 49 waypoints were created and it still wasn't enough for the colliders to be in range.
+  * Incorrect reticle configuration - the default prefab in GVR 1.7.0 was configured as
+    ``direct`` when [subsequent documentation and a bug](https://github.com/googlevr/gvr-unity-sdk/issues/666#issuecomment-322941244)
+    found that it should instead be ``camera``.  I assume this causes some speed and
+    quality issues but it was changed.
 * Positive findings
   * TBD
 * Time concerns
   * TBD
 
-![Gratuitous play tiger](screens/rec_close.jpg "Gratuitous play tiger")
 
 ## Requirements
 Software and build environment requirements.
@@ -41,6 +48,7 @@ Software and build environment requirements.
 A few extra assets were used in the creation of this project.  A best effort attempty includes the original source for this content and associated *free* AssetStore Assets (placed in the [MarketExtra](Assets/MarketExtra) folder).
 
 * [Aquarium and Fish Video](https://www.youtube.com/watch?v=bdnHKdb-Oss) - parts used for video puzzle
+* [FruitPack](https://www.assetstore.unity3d.com/en/#!/content/80254) - bananas!
 * (various internet sources for movie posters)
 
 ### Spoilers

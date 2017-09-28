@@ -4,4 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/UdacityVR/Scenes/PuzzleMaze.unity
+    guid: dcff2e542baca474fac23786373556d0

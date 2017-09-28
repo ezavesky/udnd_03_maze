@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Door : MonoBehaviour 
 {
-    // Create a boolean value called "locked" that can be checked in OnDoorClicked() 
-    // Create a boolean value called "opening" that can be checked in Update() 
+	public AudioClip clipOpen;
+	public AudioClip clipLocked;
+	private bool locked = true;
+	private bool opening = false;
 
     void Update() {
         // If the door is opening and it is not fully raised
