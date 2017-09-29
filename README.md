@@ -55,35 +55,12 @@ A few extra assets were used in the creation of this project.  A best effort att
 
 Read no further unless you want to see solutions for the "maze" in this game!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 1. The player must collect three coins and throw them into the fountain to make a key appear.
    * A sign near the fountain tells the player "three wishes in this well are the key to success"
 1. One coin can be found by watching a fish video and answering questions.
    * A sign indicates "a sharp eye is often paid quite well"
 1. One coin can be found by spelling out the word "Bananas" next to the banana tree.
-   * A sign indicates that "the obvious is often spelled out by running the right way"
+   * A sign indicates that "spell out the obvious for a pay off (click to reset)"
    * In this area, the user must gaze at the right letter in order.
 1. One coin can be found by releasing all but the blue balloons.
    * A sign indicates that "wishful thinking is never blue"

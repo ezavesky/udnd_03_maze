@@ -4,18 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameTree : MonoBehaviour {
+	public GameObject gamePrize = null;
+
+	private Color colorInitial;
 
 	// Use this for initialization
 	void Start () {
 		Text objText = transform.gameObject.GetComponent<Text> ();		//get text on this object
 		if (objText) {
 			objText.text = "";
+			colorInitial = objText.color;
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
 	public void triggerCharacter(string newLetter) {
@@ -28,5 +27,13 @@ public class GameTree : MonoBehaviour {
 			objText.text = "";
 		else
 			objText.text = objText.text + newLetter;
+		
+		if (objText.text == "BANANA") {
+			if (gamePrize)
+				gamePrize.SetActive (true);
+			objText.color = Color.green;
+		} else {
+			objText.color = colorInitial;
+		}
 	}
 }
