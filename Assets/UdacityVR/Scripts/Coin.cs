@@ -10,7 +10,7 @@ public class Coin : MonoBehaviour
 	public Inventory objInventory = null;
 
 	private Quaternion rotationInit;
-	private const int ROTATE_SEC_COMPLETE = 4;
+	private const float ROTATE_PER_SEC = 360f/4f;	//complete rotation in 4 seconds
 
 	public void Start() {
 		rotationInit = transform.rotation;
@@ -20,18 +20,15 @@ public class Coin : MonoBehaviour
 	public void Update() {
 		if (!gameObject.activeSelf)
 			return;
-		int timeSpin = (int)(Time.timeSinceLevelLoad) % ROTATE_SEC_COMPLETE;
-		Quaternion rotationEnd = rotationInit * Quaternion.Euler (0f, (360 * (Time.timeSinceLevelLoad-timeSpin)/ROTATE_SEC_COMPLETE), 0f); 
-		transform.rotation = rotationEnd; //Quaternion.Slerp (rotationInit, rotationEnd, Time.deltaTime); 
+		transform.rotation = transform.rotation * Quaternion.Euler(0f, ROTATE_PER_SEC*Time.deltaTime, 0f);
 		//Debug.Log (transform.rotation);
 	}
 
-
-	private void OnAction() {
+	private void OnAction(bool triggerAudio=true) {
 		if (effectPrefab) {
 			Instantiate (effectPrefab, transform.position, rotationInit);
 		}
-		if (clipAction) {
+		if (triggerAudio && clipAction) {
 			AudioSource sourcePlayer = Camera.main.GetComponent<AudioSource> ();
 			if (sourcePlayer)
 				sourcePlayer.PlayOneShot(clipAction);
