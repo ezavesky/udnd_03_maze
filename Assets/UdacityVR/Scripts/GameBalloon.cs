@@ -7,11 +7,17 @@ public class GameBalloon : MonoBehaviour {
 	public GameObject containerBalloon;
 	public GameObject gamePrize = null;
 
+	private BalloonBehavior[] balloonSet;
+
+	void Start() {
+		//grab once because we'll be deactivating some components
+		balloonSet = transform.GetComponentsInChildren<BalloonBehavior>();
+	}
 
 	//check to see if there was a blue balloon found..
 	public void triggerCheck() {
 		bool magicFound = false;
-		foreach (BalloonBehavior child in transform.GetComponentsInChildren<BalloonBehavior> ()) {
+		foreach (BalloonBehavior child in balloonSet) {
 			//Debug.Log ("CHILD: " + child.isFree + ", magic:" + child.isMagic);
 			if (child.isMagic && !child.isFree) 
 				magicFound = true;
@@ -26,7 +32,7 @@ public class GameBalloon : MonoBehaviour {
 	//reset all balloon positions
 	public void triggerReset() {
 		//Debug.Log ("RESET");
-		foreach (BalloonBehavior child in transform.GetComponentsInChildren<BalloonBehavior> ()) {
+		foreach (BalloonBehavior child in balloonSet) {
 			child.resetPosition ();
 		}
 	}

@@ -73,6 +73,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33402563482222242
 MeshFilter:
@@ -104,3 +105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2253f7e5b4c14d6ca1d63312bab36c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effectPrefab: {fileID: 1000012050171414, guid: a23ffaca255fa4747b575275717320f5,
+    type: 2}
+  objInventory: {fileID: 0}

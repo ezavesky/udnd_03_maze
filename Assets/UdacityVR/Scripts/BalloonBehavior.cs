@@ -5,6 +5,7 @@ using UnityEngine;
 public class BalloonBehavior : MonoBehaviour {
 	private float timeComplete;
 	private float timeLast;
+	private float timeFree;
 	private Vector3 positionComplete;
 	private Vector3 positionInit;
 	private Vector3 positionLast;
@@ -28,7 +29,8 @@ public class BalloonBehavior : MonoBehaviour {
 				generatePosition ();
 			transform.localPosition = Vector3.Slerp (positionLast, positionComplete, timeLast / timeComplete);
 		} else {
-			if (transform.localPosition.y > 20) {
+			timeFree += Time.deltaTime;
+			if (timeFree > 10) {
 				gameObject.SetActive (false);
 			}
 		}
@@ -37,6 +39,7 @@ public class BalloonBehavior : MonoBehaviour {
 	//generate new random target position for balloon
 	private void generatePosition() {
 		timeLast = 0f;
+		timeFree = 0f;
 		positionLast = positionComplete;
 		//random duration for moving around
 		timeComplete = Random.Range(1f, MAX_TIME_DRIFT);
@@ -55,10 +58,12 @@ public class BalloonBehavior : MonoBehaviour {
 		if ((rigidbody.constraints & RigidbodyConstraints.FreezePositionY)!=0) {
 			rigidbody.constraints &= ~RigidbodyConstraints.FreezePositionY;
 			isFree = true;
+			Debug.Log ("Marking balloon as free...");
 		}
 		if (reset) {
 			rigidbody.constraints |= RigidbodyConstraints.FreezePositionY;
 			isFree = false;
+			Debug.Log ("Reseting balloon position and locked...");
 		}
 	}
 

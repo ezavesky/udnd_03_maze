@@ -27,7 +27,7 @@ public class Inventory : MonoBehaviour {
 		}
 
 		if (textInventory) {
-			textInventory.text = string.Format("Inventory\n{0} coin{2}, {2} key{3}", 
+			textInventory.text = string.Format("Inventory\n{0} coin{1}, {2} key{3}", 
 				numCoins, numCoins==1 ? "" : "s", numKeys, numKeys==1 ? "" : "s");
 			//TODO, update the text?
 		}

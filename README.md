@@ -30,10 +30,27 @@ TBD
     ``direct`` when [subsequent documentation and a bug](https://github.com/googlevr/gvr-unity-sdk/issues/666#issuecomment-322941244)
     found that it should instead be ``camera``.  I assume this causes some speed and
     quality issues but it was changed.
+  * Rotation troubles - When creating some objects and using prefabs, I found that
+    instantiating a new object using parent, global, or local rotation was slightly confusing.
+  * Overlapping walls and objects - similar to the positioning of game objects to be
+    flush with other walls, floors, etc, I found some challenge in reducing the visual
+    "glitches" caused by two surfaces trying to simultaneously render (e.g. a column and a wall)
 * Positive findings
-  * TBD
+  * Camera textures - it was fun to discover the capability for a camera texture and
+    an easy implementation of it in the game.
+  * Creating new materials - semi-transparent and movie-playing textures were fairly trivial
+    to create as ell.
 * Time concerns
-  * TBD
+  * Initial setup and alignment of the maze walls - this took longer than expected with
+    no automated tools and positioning being fairly arbitrary (e.g. no easy grid snap)
+  * More message board interaction - additional interactions could be added to the
+    various sign/display boards, but the gameplay was simplified to be more intuitive
+    instead of thinking of all of these shortfalls.
+
+
+* bugs:
+   * balloons float off randomly, don't reset correctly
+   * add sound to clicking of buttons and release of balloon
 
 
 ## Requirements

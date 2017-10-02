@@ -5,37 +5,39 @@ using UnityEngine;
 public class Key : MonoBehaviour 
 {
 	public GameObject effectPrefab = null;
-	public AudioClip clipAction = null;
-	public Inventory objInventory = null;
 
 	private Quaternion rotationInit;
 	private const float ROTATE_PER_SEC = 360f/4f;	//complete rotation in 4 seconds
 
 	public void Start() {
-		rotationInit = transform.rotation;
+		rotationInit = transform.localRotation;
+	}
+
+	void OnEnable() {
+		OnAction (false);
 	}
 
 	public void Update() {
 		if (!gameObject.activeSelf)
 			return;
-		transform.rotation = transform.rotation * Quaternion.Euler(0f, ROTATE_PER_SEC*Time.deltaTime, 0f);
+		transform.localRotation = transform.localRotation * Quaternion.Euler(0f, 0f, ROTATE_PER_SEC*Time.deltaTime);
 		//Debug.Log (transform.rotation);
 	}
 
-	private void OnAction(bool triggerAudio) {
-		if (effectPrefab) {
-			Instantiate (effectPrefab, transform.position, rotationInit);
-		}
-		if (triggerAudio && clipAction) {
-			AudioSource sourcePlayer = Camera.main.GetComponent<AudioSource> ();
-			if (sourcePlayer)
-				sourcePlayer.PlayOneShot(clipAction);
+	private void OnAction(bool triggerEffect) {
+		if (triggerEffect && effectPrefab) {
+			GameObject newObj = Instantiate (effectPrefab, transform.position, effectPrefab.transform.rotation );
 		}
 	}
 
 	public void OnKeyClicked() {
 		Debug.Log ("Key clicked, attempting prefab...");
 		OnAction (true);
+
+		GameObject objPlayer = GameObject.FindGameObjectWithTag ("Player");
+		Inventory objInventory = null;
+		if (objPlayer)
+			objInventory = objPlayer.GetComponent<Inventory> ();
 		if (objInventory)
 			objInventory.updateInventory ("keys");
 		//Destroy(gameObject);
@@ -45,8 +47,6 @@ public class Key : MonoBehaviour
 		// Set the Key Collected Variable to true
 		// Destroy the key. Check the Unity documentation on how to use Destroy
 	}
-
-
 
 
 }
