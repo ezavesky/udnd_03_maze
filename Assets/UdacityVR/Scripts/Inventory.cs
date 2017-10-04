@@ -5,13 +5,16 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour {
 	public Text textInventory = null;
+	public Door doorObject = null;
 
 	private int numCoins = 0;
 	private int numKeys = 0;
+	private GameObject objKeyRespawn = null;
 
 	// Use this for initialization
 	void Start () {
 		updateInventory (null);
+		objKeyRespawn = GameObject.FindGameObjectWithTag ("Hilight");
 	}
 	
 	// Update is called once per frame
@@ -22,7 +25,11 @@ public class Inventory : MonoBehaviour {
 	public void updateInventory(string type) {
 		switch(type) {
 			case "coin": numCoins += 1; break;
-			case "keys": numKeys += 1; break;
+			case "keys": 
+				numKeys += 1; 
+				if (doorObject)
+					doorObject.LockSet (false);
+				break;
 			default: break;
 		}
 
@@ -33,4 +40,23 @@ public class Inventory : MonoBehaviour {
 		}
 	}
 
+	public void ResetGame() {
+		//reset inventory
+		numCoins = 0;
+		numKeys = 0;
+		if (objKeyRespawn)
+			objKeyRespawn.SetActive (true);
+
+		//lock door
+		if (doorObject)
+			doorObject.LockSet (true);
+
+		//reset to first magic waypoint
+		GameObject objWaypoint = GameObject.FindGameObjectWithTag ("Respawn");
+		Waypoint waypointInitial = null;
+		if (objWaypoint)
+			waypointInitial = objWaypoint.GetComponent<Waypoint> ();
+		if (waypointInitial)
+			waypointInitial.Click ();
+	}
 }
