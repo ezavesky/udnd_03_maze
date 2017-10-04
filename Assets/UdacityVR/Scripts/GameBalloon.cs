@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GameBalloon : MonoBehaviour {
+public class GameBalloon : MonoBehaviour, IHilightBase {
 	public GameObject containerBalloon;
 	public GameObject gamePrize = null;
 
@@ -30,7 +30,7 @@ public class GameBalloon : MonoBehaviour {
 	}
 
 	//reset all balloon positions
-	public void triggerReset() {
+	public void Reset() {
 		//Debug.Log ("RESET");
 		foreach (BalloonBehavior child in balloonSet) {
 			child.resetPosition ();

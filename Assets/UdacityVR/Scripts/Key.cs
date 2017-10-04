@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Key : MonoBehaviour 
+public class Key : MonoBehaviour, IHilightBase 
 {
 	public GameObject effectPrefab = null;
 
 	//private Quaternion rotationInit;
 	private const float ROTATE_PER_SEC = 360f/4f;	//complete rotation in 4 seconds
+
+	public void Reset() {
+		gameObject.SetActive (true);
+	}
 
 	public void Start() {
 		//rotationInit = transform.localRotation;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameTree : MonoBehaviour {
+public class GameTree : MonoBehaviour, IHilightBase {
 	public GameObject gamePrize = null;
 
 	private Color colorInitial;
@@ -35,5 +35,9 @@ public class GameTree : MonoBehaviour {
 		} else {
 			objText.color = colorInitial;
 		}
+	}
+
+	public void Reset() {
+		triggerCharacter ("");
 	}
 }

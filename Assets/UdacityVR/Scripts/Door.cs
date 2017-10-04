@@ -61,4 +61,9 @@ public class Door : MonoBehaviour
 		// You'll need to set "locked" to false here
 		locked = bIsNowLocked;
     }
+
+	public virtual void Reset() {
+		transform.position = posInitial;
+		LockSet (true);
+	}
 }

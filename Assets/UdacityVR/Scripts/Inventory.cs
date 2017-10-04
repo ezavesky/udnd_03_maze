@@ -9,17 +9,10 @@ public class Inventory : MonoBehaviour {
 
 	private int numCoins = 0;
 	private int numKeys = 0;
-	private GameObject objKeyRespawn = null;
 
 	// Use this for initialization
 	void Start () {
 		updateInventory (null);
-		objKeyRespawn = GameObject.FindGameObjectWithTag ("Hilight");
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
 	public void updateInventory(string type) {
@@ -41,15 +34,16 @@ public class Inventory : MonoBehaviour {
 	}
 
 	public void ResetGame() {
+		//reset all hilights
+		foreach (GameObject objHilight in GameObject.FindGameObjectsWithTag("Hilight")) {
+			IHilightBase hilightBase = objHilight.GetComponent<IHilightBase>();
+			if (hilightBase != null) 
+				hilightBase.Reset();
+		}
+
 		//reset inventory
 		numCoins = 0;
 		numKeys = 0;
-		if (objKeyRespawn)
-			objKeyRespawn.SetActive (true);
-
-		//lock door
-		if (doorObject)
-			doorObject.LockSet (true);
 
 		//reset to first magic waypoint
 		GameObject objWaypoint = GameObject.FindGameObjectWithTag ("Respawn");

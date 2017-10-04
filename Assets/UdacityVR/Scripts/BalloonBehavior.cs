@@ -55,15 +55,15 @@ public class BalloonBehavior : MonoBehaviour {
 	public void toggleFreezePosition(bool reset=false) {
 		Rigidbody rigidbody = gameObject.GetComponent<Rigidbody> ();
 		//http://answers.unity3d.com/questions/238887/can-you-unfreeze-a-rigidbodyconstraint-position-as.html
-		if ((rigidbody.constraints & RigidbodyConstraints.FreezePositionY)!=0) {
-			rigidbody.constraints &= ~RigidbodyConstraints.FreezePositionY;
-			isFree = true;
-			Debug.Log ("Marking balloon as free...");
-		}
 		if (reset) {
 			rigidbody.constraints |= RigidbodyConstraints.FreezePositionY;
 			isFree = false;
 			Debug.Log ("Reseting balloon position and locked...");
+		}
+		else if ((rigidbody.constraints & RigidbodyConstraints.FreezePositionY)!=0) {
+			rigidbody.constraints &= ~RigidbodyConstraints.FreezePositionY;
+			isFree = true;
+			Debug.Log ("Marking balloon as free...");
 		}
 	}
 

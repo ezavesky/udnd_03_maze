@@ -40,17 +40,13 @@ TBD
     an easy implementation of it in the game.
   * Creating new materials - semi-transparent and movie-playing textures were fairly trivial
     to create as ell.
+  * Linked audio and animation - in animation controller for treasure chest, establish audio and visual link as well as time-delayed open/close action
 * Time concerns
   * Initial setup and alignment of the maze walls - this took longer than expected with
     no automated tools and positioning being fairly arbitrary (e.g. no easy grid snap)
   * More message board interaction - additional interactions could be added to the
     various sign/display boards, but the gameplay was simplified to be more intuitive
     instead of thinking of all of these shortfalls.
-
-
-* bugs:
-   * balloons float off randomly, don't reset correctly
-   * add sound to clicking of buttons and release of balloon
 
 
 ## Requirements
@@ -66,7 +62,8 @@ A few extra assets were used in the creation of this project.  A best effort att
 
 * [Aquarium and Fish Video](https://www.youtube.com/watch?v=bdnHKdb-Oss) - parts used for video puzzle
 * [FruitPack](https://www.assetstore.unity3d.com/en/#!/content/80254) - bananas!
-* (various internet sources for movie posters)
+* [Odds N Ends Series Vol. 1](https://www.assetstore.unity3d.com/en/#!/content/60504) - banana trees
+* [various sound effects](https://www.partnersinrhyme.com/soundfx), [various sound effects 2](http://freesound.org) - shock, door, treasure, knock
 
 ### Spoilers
 

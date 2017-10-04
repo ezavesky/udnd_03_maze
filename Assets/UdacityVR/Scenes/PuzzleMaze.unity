@@ -11964,7 +11964,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 756112539}
-          m_MethodName: triggerReset
+          m_MethodName: Reset
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -13438,6 +13438,10 @@ Prefab:
         type: 2}
       propertyPath: m_FontData.m_BestFit
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012225730090, guid: f70ec84cc3ad04416a54397138e8f071, type: 2}
+      propertyPath: m_TagString
+      value: Hilight
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114000010273216534, guid: f70ec84cc3ad04416a54397138e8f071, type: 2}
@@ -21421,6 +21425,10 @@ Prefab:
       propertyPath: m_FontData.m_BestFit
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012225730090, guid: f70ec84cc3ad04416a54397138e8f071, type: 2}
+      propertyPath: m_TagString
+      value: Hilight
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114000010273216534, guid: f70ec84cc3ad04416a54397138e8f071, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f70ec84cc3ad04416a54397138e8f071, type: 2}
@@ -28632,6 +28640,10 @@ Prefab:
       propertyPath: clipLocked
       value: 
       objectReference: {fileID: 8300000, guid: 96938528bed694bfcbc2f6df6a3f5fcc, type: 3}
+    - target: {fileID: 1212538085453316, guid: f9822e67385a4402d9bf680e50d19d58, type: 2}
+      propertyPath: m_TagString
+      value: Hilight
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9822e67385a4402d9bf680e50d19d58, type: 2}
   m_IsPrefabParent: 0
