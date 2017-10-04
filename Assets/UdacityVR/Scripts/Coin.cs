@@ -7,11 +7,11 @@ public class Coin : MonoBehaviour
     //Create a reference to the CoinPoofPrefab
 	public GameObject effectPrefab = null;
 
-	private Quaternion rotationInit;
+	//private Quaternion rotationInit;
 	private const float ROTATE_PER_SEC = 360f/4f;	//complete rotation in 4 seconds
 
 	public void Start() {
-		rotationInit = transform.localRotation;
+		//rotationInit = transform.localRotation;
 	}
 
 	void OnEnable() {
@@ -27,7 +27,7 @@ public class Coin : MonoBehaviour
 
 	private void OnAction(bool triggerEffect=true) {
 		if (triggerEffect && effectPrefab) {
-			GameObject newObj = Instantiate (effectPrefab, transform.position, effectPrefab.transform.rotation );
+			Instantiate (effectPrefab, transform.position, effectPrefab.transform.rotation );
 			//newObj.transform.parent = transform.parent;
 		}
 		/*
