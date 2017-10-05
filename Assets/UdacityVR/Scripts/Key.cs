@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Key : MonoBehaviour, IHilightBase 
+public class Key : MonoBehaviour, IGameInterface 
 {
 	public GameObject effectPrefab = null;
 

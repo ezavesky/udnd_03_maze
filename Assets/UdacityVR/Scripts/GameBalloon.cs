@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GameBalloon : MonoBehaviour, IHilightBase {
+public class GameBalloon : MonoBehaviour, IGameInterface {
 	public GameObject containerBalloon;
 	public GameObject gamePrize = null;
 

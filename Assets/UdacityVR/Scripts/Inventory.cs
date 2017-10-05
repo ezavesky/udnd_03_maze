@@ -35,10 +35,12 @@ public class Inventory : MonoBehaviour {
 
 	public void ResetGame() {
 		//reset all hilights
-		foreach (GameObject objHilight in GameObject.FindGameObjectsWithTag("Hilight")) {
-			IHilightBase hilightBase = objHilight.GetComponent<IHilightBase>();
-			if (hilightBase != null) 
-				hilightBase.Reset();
+		foreach (GameObject objHilight in GameObject.FindGameObjectsWithTag("Game")) {
+			Debug.Log (objHilight);
+			IGameInterface hilightBase = objHilight.GetComponent<IGameInterface>();
+			if (hilightBase != null) {
+				hilightBase.Reset ();
+			}
 		}
 
 		//reset inventory

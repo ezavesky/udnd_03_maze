@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameTree : MonoBehaviour, IHilightBase {
+public class GameTree : MonoBehaviour, IGameInterface {
 	public GameObject gamePrize = null;
 
 	private Color colorInitial;

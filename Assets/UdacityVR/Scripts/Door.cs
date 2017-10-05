@@ -62,7 +62,7 @@ public class Door : MonoBehaviour
 		locked = bIsNowLocked;
     }
 
-	public virtual void Reset() {
+	public void Reset() {
 		transform.position = posInitial;
 		LockSet (true);
 	}
