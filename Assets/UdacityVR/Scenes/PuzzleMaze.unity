@@ -11960,7 +11960,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 40c14dc5b91b240478c0a6029c5bdfb8, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -15008,7 +15008,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7d4939649eb8042d0ad70800ebbe2c00, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -20135,7 +20135,7 @@ Prefab:
     - target: {fileID: 114000011825276680, guid: f70ec84cc3ad04416a54397138e8f071,
         type: 2}
       propertyPath: m_Text
-      value: Game under construction
+      value: Puzzle under construction
       objectReference: {fileID: 0}
     - target: {fileID: 114000011825276680, guid: f70ec84cc3ad04416a54397138e8f071,
         type: 2}
@@ -28763,6 +28763,11 @@ Prefab:
       propertyPath: m_TagString
       value: Game
       objectReference: {fileID: 0}
+    - target: {fileID: 82089166722012230, guid: f9822e67385a4402d9bf680e50d19d58,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9822e67385a4402d9bf680e50d19d58, type: 2}
   m_IsPrefabParent: 0
@@ -31305,7 +31310,7 @@ Prefab:
     - target: {fileID: 114000011825276680, guid: f70ec84cc3ad04416a54397138e8f071,
         type: 2}
       propertyPath: m_Text
-      value: Game under construction
+      value: Puzzle under construction
       objectReference: {fileID: 0}
     - target: {fileID: 114000011825276680, guid: f70ec84cc3ad04416a54397138e8f071,
         type: 2}

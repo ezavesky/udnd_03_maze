@@ -1,16 +1,6 @@
 # udnd_03_maze
 udnd Maze for project 3 in Udacity VR course - September 2017
-
-## Project Contents
-Quick description of contents within this repo.
-
-* Assets - assets including GoogleVR SDK clips for project
-* ProjectSettings - project settings for builds
-* .gitignore - ignore file based on Unity footprint
-* build.zip - compressed build for Android
-* LICENSE - current license
-* README.md - this file
-* screens/ - examples of screenshots within app
+![Maze Overview](Walkthrough/screenshot.jpg)
 
 ### Customizations
 TBD
@@ -48,6 +38,17 @@ TBD
     various sign/display boards, but the gameplay was simplified to be more intuitive
     instead of thinking of all of these shortfalls.
 
+
+## Project Contents
+Quick description of contents within this repo.
+
+* Assets - assets including GoogleVR SDK clips for project
+* ProjectSettings - project settings for builds
+* .gitignore - ignore file based on Unity footprint
+* build.zip - compressed build for Android
+* LICENSE - current license
+* README.md - this file
+* screens/ - examples of screenshots within app
 
 ## Requirements
 Software and build environment requirements.
