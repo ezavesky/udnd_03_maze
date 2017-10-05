@@ -230,7 +230,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114566166583540592}
+        - m_Target: {fileID: 114443115373621268, guid: e4bf70d78a7b74af7ac60f7f4d28522f,
+            type: 2}
           m_MethodName: toggleFreezePosition
           m_Mode: 6
           m_Arguments:
@@ -240,6 +241,18 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
+          m_CallState: 1
+        - m_Target: {fileID: 1515299704599734, guid: e4bf70d78a7b74af7ac60f7f4d28522f,
+            type: 2}
+          m_MethodName: SendMessageUpwards
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: triggerCut
+            m_BoolArgument: 1
           m_CallState: 1
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null

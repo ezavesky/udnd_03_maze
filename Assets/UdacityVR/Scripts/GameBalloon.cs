@@ -14,7 +14,7 @@ public class GameBalloon : MonoBehaviour, IGameInterface {
 		balloonSet = transform.GetComponentsInChildren<BalloonBehavior>();
 	}
 
-	//check to see if there was a blue balloon found..
+	//check to see if there was a blue balloon found from broadcast message
 	public void triggerCheck() {
 		bool magicFound = false;
 		foreach (BalloonBehavior child in balloonSet) {
@@ -28,6 +28,14 @@ public class GameBalloon : MonoBehaviour, IGameInterface {
 				gamePrize.SetActive (true);
 		}
 	}
+
+	//balloon was cut, broadcasted this message
+	public void triggerCut() {
+		AudioSource objSource = gameObject.GetComponent<AudioSource> ();
+		if (objSource)
+			objSource.Play();
+	}
+
 
 	//reset all balloon positions
 	public void Reset() {

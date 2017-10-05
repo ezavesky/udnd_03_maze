@@ -33,6 +33,9 @@ public class GameTree : MonoBehaviour, IGameInterface {
 				gamePrize.SetActive (true);
 			objText.color = Color.green;
 		} else {
+			AudioSource objSource = gameObject.GetComponent<AudioSource> ();
+			if (objSource)
+				objSource.Play();
 			objText.color = colorInitial;
 		}
 	}
