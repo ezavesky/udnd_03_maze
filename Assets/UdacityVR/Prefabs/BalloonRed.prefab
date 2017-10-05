@@ -242,7 +242,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 1
         - m_Target: {fileID: 1220302446376568}
-          m_MethodName: BroadcastMessage
+          m_MethodName: SendMessageUpwards
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

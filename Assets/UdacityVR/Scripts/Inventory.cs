@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour {
 	public Text textInventory = null;
 	public Door doorObject = null;
+	public AudioClip clipRewind = null;
 
 	private int numCoins = 0;
 	private int numKeys = 0;
@@ -60,5 +61,13 @@ public class Inventory : MonoBehaviour {
 			waypointInitial = objWaypoint.GetComponent<Waypoint> ();
 		if (waypointInitial)
 			waypointInitial.Click ();
+
+		if (clipRewind) {
+			AudioSource sourcePlayer = Camera.main.GetComponent<AudioSource> ();
+			if (sourcePlayer)
+				sourcePlayer.PlayOneShot (clipRewind);
+		}			
+
+
 	}
 }

@@ -6,6 +6,7 @@ public class Door : MonoBehaviour, IGameInterface
 {
 	public AudioClip clipOpen = null;
 	public AudioClip clipLocked = null;
+	public AudioClip clipFanfare = null;
 	public float TIME_TOTAL_OPEN = 4;
 
 	public bool locked = true;
@@ -25,8 +26,17 @@ public class Door : MonoBehaviour, IGameInterface
         // If the door is opening and it is not fully raised
 		if (opening) {
 			timeComplete += Time.deltaTime;
-			if (timeComplete >= TIME_TOTAL_OPEN)
+			if (timeComplete >= TIME_TOTAL_OPEN) {
 				opening = false;
+				if (clipFanfare) {
+					AudioSource sourcePlayer = Camera.main.GetComponent<AudioSource> ();
+					if (sourcePlayer) {
+						sourcePlayer.Stop ();
+						sourcePlayer.Play ();
+						sourcePlayer.PlayOneShot (clipFanfare);
+					}
+				}			
+			}
 			else {
 				if (clipOpen) {
 					AudioSource sourcePlayer = Camera.main.GetComponent<AudioSource> ();
@@ -64,6 +74,8 @@ public class Door : MonoBehaviour, IGameInterface
 
 	public void Reset() {
 		transform.position = posInitial;
+		timeComplete = 0;
+		opening = false;
 		LockSet (true);
 	}
 }

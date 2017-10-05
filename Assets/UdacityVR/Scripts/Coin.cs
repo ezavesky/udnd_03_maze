@@ -6,6 +6,7 @@ public class Coin : MonoBehaviour
 {
     //Create a reference to the CoinPoofPrefab
 	public GameObject effectPrefab = null;
+	public bool actionOnEnable = true;
 
 	//private Quaternion rotationInit;
 	private const float ROTATE_PER_SEC = 360f/4f;	//complete rotation in 4 seconds
@@ -15,7 +16,8 @@ public class Coin : MonoBehaviour
 	}
 
 	void OnEnable() {
-		OnAction ();
+		if (actionOnEnable)
+			OnAction ();
 	}
 
 	public void Update() {
