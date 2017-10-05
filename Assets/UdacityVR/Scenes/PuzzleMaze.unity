@@ -13441,7 +13441,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000012225730090, guid: f70ec84cc3ad04416a54397138e8f071, type: 2}
       propertyPath: m_TagString
-      value: Game
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114000010273216534, guid: f70ec84cc3ad04416a54397138e8f071, type: 2}
@@ -14001,6 +14001,10 @@ Prefab:
     - target: {fileID: 1000012225730090, guid: f70ec84cc3ad04416a54397138e8f071, type: 2}
       propertyPath: m_Name
       value: SignTreeWord
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012225730090, guid: f70ec84cc3ad04416a54397138e8f071, type: 2}
+      propertyPath: m_TagString
+      value: Game
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114000010273216534, guid: f70ec84cc3ad04416a54397138e8f071, type: 2}
