@@ -28,7 +28,8 @@ fish video and answering questions.
    * ![Movie Puzzle](puzzle-movie.gif)
 1. The key is adjacent to the balloon puzzle and is currently always present.
    * ![Key Pickup](key-pickup.gif)
- 1. A view from the "penthouse" will let a player get a quick cheat sheet if they look
+1. A view of the temple roof from the "penthouse" will let a player get a quick
+   cheat sheet if they look
    * ![Full Penthouse View](penthouse-full.gif)
 
 ## Inventory and Jumping to Critical Sections
@@ -57,4 +58,4 @@ from the original author.**
 1. Q: How many jellyfish were in the second video? A: hundreds, B: three, C: four
 1. Q: What type of fish was in the last video? A: Clownfish, B: Mantaray, C: Dolphin
 
-[the fish puzzle video](../A Maze/Assets/StreamingAssets/fish_480.mp4)
+![the fish puzzle video](../Assets/StreamingAssets/fish_480.mp4)

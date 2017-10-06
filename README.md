@@ -55,7 +55,11 @@ and a simple task) to create a mildly entertaining VR game.
     an easy implementation of it in the game.
   * Creating new materials - semi-transparent and movie-playing textures were fairly trivial
     to create as ell.
-  * Linked audio and animation - in animation controller for treasure chest, establish audio and visual link as well as time-delayed open/close action
+  * Linked audio and animation - in animation controller for treasure chest, establish
+    audio and visual link as well as time-delayed open/close action
+  * Broadcast messages and tags - instead of requiring that each game object know about
+    others in script and the editor, sending messages and grabbing game objects
+    by tags proved a faster, more rewarding process for fast script generation.
 * Time concerns
   * Initial setup and alignment of the maze walls - this took longer than expected with
     no automated tools and positioning being fairly arbitrary (e.g. no easy grid snap)
