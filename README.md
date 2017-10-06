@@ -1,14 +1,37 @@
 # udnd_03_maze
 udnd Maze for project 3 in Udacity VR course - September 2017
-![Maze Overview](Walkthrough/screenshot.jpg)
+![Maze Overview from the "Penthouse"](Walkthrough/penthouse.gif)
+
+## Project Contents
+Quick description of contents within this repo.
+
+* Assets - assets including GoogleVR SDK clips for project
+* ProjectSettings - project settings for builds
+* .gitignore - ignore file based on Unity footprint
+* build.zip - compressed build for Android
+* LICENSE - current license
+* README.md - this file
+* Walkthrough/ - examples of screenshots and solutions to puzzles
 
 ### Customizations
-TBD
+The project prompt was a simple maze, but this application incorporates a few
+simple puzzles to provide pick-up items.  In addition to these puzzles, a number
+of other object configurations inspired by the material in this course were
+created to learn and flex the engine a little.
 
-* TBD
+* Waypoint navigation - for a while, waypoint navigation seemed non-ideal. After
+exploring some alternatives like a lean-in or mode-based auto navigation, the
+existing waypoint click method was re-adopted.  
+* Penthouse - a simulated glass skybox that overlooks the maze
+* Banana puzzle - using signs, an interactive spelling test
+* Balloon puzzle - using "floating" balloons, free the right ones
+* Display monoliths - using camera textures, show the user previews of what could be
+* Temple cheatsheet - a large sign positioned out of immediate view that explains each puzzle
+* animations and sounds - attached to puzzles and objects to bring some minor excitement to the game
 
 ### Comments
-TBD
+This project was a good chance to experiment with modest beginnings (a few good meshes
+and a simple task) to create a mildly entertaining VR game.
 
 * Challenges
   * Reticle interactions - generally the click-based navigation with waypoints was
@@ -39,17 +62,6 @@ TBD
     instead of thinking of all of these shortfalls.
 
 
-## Project Contents
-Quick description of contents within this repo.
-
-* Assets - assets including GoogleVR SDK clips for project
-* ProjectSettings - project settings for builds
-* .gitignore - ignore file based on Unity footprint
-* build.zip - compressed build for Android
-* LICENSE - current license
-* README.md - this file
-* screens/ - examples of screenshots within app
-
 ## Requirements
 Software and build environment requirements.
 
@@ -66,19 +78,6 @@ A few extra assets were used in the creation of this project.  A best effort att
 * [Odds N Ends Series Vol. 1](https://www.assetstore.unity3d.com/en/#!/content/60504) - banana trees
 * [various sound effects](https://www.partnersinrhyme.com/soundfx), [various sound effects 2](http://freesound.org) - shock, door, treasure, knock
 
-### Spoilers
-
-Read no further unless you want to see solutions for the "maze" in this game!
-
-1. The player must collect three coins and throw them into the fountain to make a key appear.
-   * A sign near the fountain tells the player "three wishes in this well are the key to success"
-1. One coin can be found by watching a fish video and answering questions.
-   * A sign indicates "a sharp eye is often paid quite well"
-1. One coin can be found by spelling out the word "Bananas" next to the banana tree.
-   * A sign indicates that "spell out the obvious for a pay off (click to reset)"
-   * In this area, the user must gaze at the right letter in order.
-1. One coin can be found by releasing all but the blue balloons.
-   * A sign indicates that "wishful thinking is never blue"
-   * Here, the user releases one of many balloons by starting at them.
-1. A view from the "penthouse" will let a player get a quick cheat sheet if they look
-   at the roof of the main temple building.
+### Walkthrough Spoiler
+Read no further unless you want to see solutions for the "puzzles" in this maze.
+[Show me the walkthrough!](Walkthrough/README.md).
