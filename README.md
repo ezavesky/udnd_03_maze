@@ -48,6 +48,8 @@ and a simple task) to create a mildly entertaining VR game.
   * Overlapping walls and objects - similar to the positioning of game objects to be
     flush with other walls, floors, etc, I found some challenge in reducing the visual
     "glitches" caused by two surfaces trying to simultaneously render (e.g. a column and a wall)
+  * Video textures - planned for the movie game, this component (movie texture, a plugin, the format)
+    was too hard to tackle with the time remaining.  
 * Positive findings
   * Camera textures - it was fun to discover the capability for a camera texture and
     an easy implementation of it in the game.
@@ -71,7 +73,7 @@ Software and build environment requirements.
 * Android KitKat 4.4 or later
 
 ### Extra Assets
-A few extra assets were used in the creation of this project.  A best effort attempty includes the original source for this content and associated *free* AssetStore Assets (placed in the [MarketExtra](Assets/MarketExtra) folder).
+A few extra assets were used in the creation of this project.  A best effort attempt includes the original source for this content and associated *free* AssetStore Assets (placed in the [MarketExtra](Assets/MarketExtra) folder).
 
 * [Aquarium and Fish Video](https://www.youtube.com/watch?v=bdnHKdb-Oss) - parts used for video puzzle
 * [FruitPack](https://www.assetstore.unity3d.com/en/#!/content/80254) - bananas!
