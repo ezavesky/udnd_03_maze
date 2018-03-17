@@ -2,6 +2,11 @@
 udnd Maze for project 3 in Udacity VR course - September 2017
 ![Maze Overview](penthouse.gif)
 
+## Final Complete Walthrough
+[![Final Application Walkthrough](http://img.youtube.com/vi/TUc2Sz9aQRw/0.jpg)](https://youtu.be/TUc2Sz9aQRw)
+* Video of the entire experience, picking up coins, keys, and the final treasure.
+
+## Individual Area Walkthrough
 Read no further unless you want to see solutions for the "maze" in this game!
 
 This maze combines collectables (coins and keys) with a simple locked door (the temple)
