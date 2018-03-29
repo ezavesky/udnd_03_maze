@@ -1,9 +1,7 @@
 (Posted as information for a nomination -- thanks!)
 
 ## Overview
-This project got a little out of hand, but it was fun the whole time.  From the onset, two goals were to 
-   a. make it a fun maze experience for myself and my users (my family) and 
-   b. get some hands-on experience with a lot of the interesting functions that Unity offered.  
+This project got a little out of hand, but it was fun the whole time.  From the onset, two goals were to (a) make it a fun maze experience for myself and my users (my family) and (b) get some hands-on experience with a lot of the interesting functions that Unity offered.  
 
 During design, these goals included (a) object and physics interactions for balloons, (b) render textures for "in game cameras", (c) truly moving a user in 3D (up/down) to explore a complex space.  
 
