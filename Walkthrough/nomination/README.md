@@ -20,7 +20,7 @@ This image depicts one of three games to get the "keys" for the within the game 
 
 This image captures two fun parts fo the game that were also learning experiences: the use of an in-game render texture and some pseudo-physics with floating balloons.  The texture was a fun way to show a live view of another part of the maze, that users could consequently transport themselves to, similar to video cameras in more FPS style interactions.  The balloons were a way to make something interactive that fit the game’s mini-game setting but was also a bit of puzzle — what do you do with the balloons and how do they interact together?
 
-## Render Texture
+## Full Walkthrough
 
 [![https://youtu.be/TUc2Sz9aQRw](http://img.youtube.com/vi/TUc2Sz9aQRw/0.jpg)](https://youtu.be/TUc2Sz9aQRw)
 
